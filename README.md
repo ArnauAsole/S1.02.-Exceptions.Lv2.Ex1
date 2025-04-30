@@ -65,11 +65,10 @@ Git Bash
 
 Clone the repository:
 
-bash
-Copiar
-Editar
-git clone https://github.com/yourusername/input-validation-java.git
-cd input-validation-java
+git clone https://github.com/ArnauAsole/S1.02.-Exceptions.Lv2.Ex1.git
+
+cd ArnauAsole/S1.02.-Exceptions.Lv2.Ex1/
+
 Open the project with IntelliJ:
 
 Go to File → Open and select the cloned folder
