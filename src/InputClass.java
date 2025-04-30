@@ -11,7 +11,7 @@ public class InputClass {
                 return scanner.nextByte();
             } catch (InputMismatchException e) {
                 System.out.println("Format error. Please enter a valid byte.");
-                scanner.nextLine(); // clear buffer
+                scanner.next(); // clear buffer
             }
         }
     }
@@ -23,7 +23,7 @@ public class InputClass {
                 return scanner.nextInt();
             } catch (InputMismatchException e) {
                 System.out.println("Format error. Please enter a valid integer.");
-                scanner.nextLine(); // clear buffer
+                scanner.nextLine();
             }
         }
     }
@@ -35,7 +35,7 @@ public class InputClass {
                 return scanner.nextFloat();
             } catch (InputMismatchException e) {
                 System.out.println("Format error. Please enter a valid float number (use comma or dot depending on your locale).");
-                scanner.nextLine(); // clear buffer
+                scanner.nextLine();
             }
         }
     }
@@ -47,7 +47,7 @@ public class InputClass {
                 return scanner.nextDouble();
             } catch (InputMismatchException e) {
                 System.out.println("Format error. Please enter a valid double number.");
-                scanner.nextLine(); // clear buffer
+                scanner.nextLine();
             }
         }
     }
@@ -63,7 +63,7 @@ public class InputClass {
                 return input.charAt(0);
             } catch (InvalidInputException e) {
                 System.out.println("Error: " + e.getMessage());
-                scanner.nextLine(); // clear buffer
+                scanner.nextLine();
             }
         }
     }
@@ -72,14 +72,14 @@ public class InputClass {
         while (true) {
             try {
                 System.out.print(message + ": ");
-                String input = scanner.next();
+                String input = scanner.nextLine();
                 if (input.trim().isEmpty()) {
                     throw new InvalidInputException("You must enter a non-empty string.");
                 }
                 return input;
             } catch (InvalidInputException e) {
                 System.out.println("Error: " + e.getMessage());
-                scanner.nextLine(); // clear buffer
+                scanner.nextLine();
             }
         }
     }
@@ -94,7 +94,7 @@ public class InputClass {
                 else throw new InvalidInputException("Please enter 's' for yes or 'n' for no.");
             } catch (InvalidInputException e) {
                 System.out.println("Error: " + e.getMessage());
-                scanner.nextLine(); // clear buffer
+                scanner.nextLine();
             }
         }
     }
